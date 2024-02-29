@@ -1,0 +1,85 @@
+/*De este modo evitamos el valor de las etiquetas por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    background-image: url("../images/yscflicroi781.jpg");
+    background-position:center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: rgb(167, 10, 10);
+    height: 100vh;
+    /*sigla view height*/
+}
+.logo {
+    width: 150px;
+    height: 100px;
+    display: flex;
+}
+
+/* Hago .header porque no se si en el futuro metere mas informacion tipo header, ya que si lo dejo como header sin el punto se aplicara a todo, en cambio si cada header tiene una clase les puedo dar valores individuales/
+Display puede tener varios valores, por ejemplo:display flex*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Justify items es para el eje z(eje superior) y Align items seria para el eje y(eje lateral).*/
+}
+
+.inside {
+    color: rgb(167, 10, 10);
+}
+
+main {
+    padding: 20px;
+}
+
+.post {
+    /* podriamos poner margin o pading*/
+    margin-bottom: 20px;
+}
+
+/* display flex por defecto deja los listados al lado del otro*/
+.sectionAutor {
+    display: flex;
+    gap: 20px;
+    /* para usar gap tiene que ser flex para decirle que se sepran los hijos*/
+}
+
+/* Apovechas una clase ya creada para usar algun valor que contiene ese clase*/
+.sectionAutor article {
+    width: 50%;
+}
+
+.bruce {
+    width: 100%;
+}
+
+/* Ahora hacemos el responvise(media query) Modificamos lo que aun no tenemos, que queremos que sea solo para 1 formato en concreto*/
+@media all and (min-width:780px) {
+    body {
+        border-left: 10px solid gray;
+    }
+
+    /* anteriormente el header esta en el centro como lo quiero cambiar a la izquierda pongo align-items: start*/
+    .header {
+        align-items: start;
+        padding: 20px;
+    }
+
+    .bruce {
+        /* como ya es flexible y solo quiero poner uno encima de otro pongo flex-direction: column*/
+        /*para poner el autor arriba del todo usamos la propiedas transform como su posicion es fuera de su naturaleza le pongo transform: trasnlateY*/
+        flex-direction: column;
+        transform: trasnlateY(-120px)
+    }
+
+    main {
+        display: flex;
+    }
+
+    /*para poner el autor arriba del todo usamos la propiedas transform como su posicion es fuera de su naturaleza le pongo transform: trasnlateY*/
+}
