@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slackLogo {
+  width: 5%;
+  height: 5%;
+  background-color: #541554;
+}
+
+.header {
+  padding: 0;
+  height: 80px;
+  background-color: #541554;
+  border-bottom: none;
+  z-index: 1000;
+  top: 0;
+  position: absolute;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+  color: white;
+  background-color: #541554;
+}
+
+.button {
+  @include border-radius(4px);
+}
+
+.speak {
+  color: white;
+  background-color: #541554;
+}
+
+.try {
+  background-color: white;
+  color: #541554;
+}
+
+.think_people {
+  color: white;
+  background-color: #541554;
+  @include border-radius(4px);
+}
+
+.think_people-made {
+  color: #ecb22e;
+  background-color: #541554;
+  font-size: x-large;
+}
+
+.rightPeople {
+  background-color: #541554;
+  color: white;
+  font-size: medium;
+}
+
+.email {
+  font-style: none;
+  color: white;
+  background-color: #541554;
+  @include border-radius(4px);
+}
+
+.google {
+  color: white;
+  background-color: #4285f4;
+  @include border-radius(4px);
+}
+
+.presentacion {
+  width: 5%;
+  height: 5%;
+}
+
+footer {
+  background-color: #f4ede4;
+  padding: 20px;
+  text-align: center;
+}
+
+.imgs {
+  padding: auto;
+  margin: 20px;
+}
